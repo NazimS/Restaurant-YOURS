@@ -1,0 +1,414 @@
+
+
+header {
+    background-image: url(img/header-bg.png);
+    background-repeat: no-repeat;
+    height: 978px;
+    /* width: 100%; */
+    background-size: cover;
+}
+header .container {
+    max-width: 746px;
+}
+header .nav-menu {
+    height: 125px;
+    background: #000000;
+    opacity: .5;
+    display: flex;
+    align-items: center;
+}
+header .nav-menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+header .nav-menu ul li a {
+    font-size: 1.2rem;
+}
+
+header .nav-menu ul a  {
+    text-decoration: none;
+    color: white;
+    transition: .5s ease-in-out;
+}
+header .nav-menu ul a:hover  {
+    color: yellow;
+}
+header .overview .infor {
+    margin: 300px 0;
+    min-width: 400px;
+    min-height: 400px;
+    text-align: center;
+}
+header .overview .infor button {
+    padding: 10px;
+    margin-top: 50px;
+    background-color: #E8BE7F;
+    border: none;
+    box-shadow: 0 0 8px white;
+}
+header .overview .infor button:hover {
+    background-color: #a87931;
+    color: white;
+    transition: .5s;
+}
+header .overview h1, p {
+    color: white;
+}
+/*main begin*/
+main {
+    background-color: #0F1011;
+}
+/*section1 begin*/
+.section1 {
+    position: relative;
+    padding-top: 50px;
+}
+main .section1 .about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 15px; */
+}
+.section1 .about .sect1-foto img {
+    width: 682px;
+    height: 792px;
+    object-fit: contain;
+}
+.section1 .about .sect1-text {
+    width: 500px;
+    line-height: 50px;
+    height: 792px;
+    left: 84px;
+    /* top: 1073px; */
+    text-align: center;
+}
+.section1 .buta {
+    position: absolute;
+    right: 0;
+    top: 20px;   
+}
+.section1 .about .sect1-text span {
+    color: #a87931;
+}
+.section1 .about .sect1-text h3 {
+    color: white;
+}
+/*section1 end*/
+
+/*bloq-section begin*/
+main .blog {
+    padding-top: 50px;
+    text-align: center;
+}
+main .blog span {color: #a87931;}
+main .blog h2 {color: white;}
+main .blog .cards img {
+    width: 100%;
+}
+/*bloq-section end*/
+
+/*menu-section3 begin*/
+main .section3 {
+    background-image: url(img/menu-bg-left.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+}
+main .section3 .basliq {
+    text-align: center;
+}
+main .section3 .basliq span {color: #a87931;}
+main .section3 .basliq h2 {color: white;}
+.section3 .top-menu {
+    padding: 50px 40px 30px 40px;
+    margin-top: 25px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white; 
+}
+.section3 .top-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section3 .top-menu ul li a:hover {
+    color: #a87931;
+    transition: .5s ease-in-out;
+}
+.section3 .top-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+}
+.section3 .top-menu ul li:nth-child(1) a {
+    color: #a87931;
+}
+.section3 .menu-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.section3 .menu-details .left-part .lasagne1 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 50px 0;
+}
+.section3 .menu-details .left-part .lasagne1 .text-part h4 {color: white;}
+.section3 .menu-details .right-part .lasagne1 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 50px 0;
+}
+.section3 .menu-details .right-part .lasagne1 .text-part h4 {color: white;}
+.section3 .work-time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+/*menu-section3 end*/
+
+/*special-offer begin*/
+main .special-offer {
+    position: relative;
+    padding-top: 50px;
+}
+main .special-offer .buta {
+    position: absolute;
+}
+main .special-offer .basliq {
+    text-align: center;
+    padding-bottom: 20px;
+}
+main .special-offer .basliq span {color: #a87931;}
+main .special-offer .basliq h2 {color: white;}
+main .special-offer .cards {
+    /* background-color:#0F1011; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+main .special-offer .cards .card {
+    border: none;
+    transition: 0.5s all ease-in-out;
+}
+main .special-offer .cards .card:hover {
+    transform: translate(0, 10px);
+}
+main .special-offer .cards .card .special-foto {
+    background-color: #0F1011;
+}
+main .special-offer .cards .card .special-foto img {
+    width: 400px;
+}
+main .special-offer .cards .card .special-text {
+    background-color: #0F1011;
+    text-align: center;
+    padding: 10px;
+}
+main .special-offer .cards .card .special-text h4 {color: #a87931;}
+
+/*spacial-offer end*/
+
+/*section5 begin*/
+.section5 {
+    margin-top: 50px;
+    background-image: url(img/eating.png);
+    height: 713px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.section5 h2 {
+    padding: 350px;
+    color: white;
+    text-align: center;
+}
+/*section5 end*/
+
+/*reservation begin*/
+.section6 {
+    margin-top: 50px;
+    position: relative;
+}
+.section6 .online-reservation {
+    /* position: absolute; */
+    max-width: 1065.34px;
+    /* height: 1002px; */
+    left: 187px;
+    /* top: 5767px; */
+    border: 1px solid #a87931;
+    margin: 5px auto;
+    padding: 40px;
+    transform: translateY(-200px);
+    background-color: #0F1011;
+}
+.online-reservation h2 {
+    text-align: center;
+    color: white;
+}
+.online-reservation input {
+    padding: 15px 15px 15px 45px;
+}
+.online-reservation .inputs2 {
+    position: relative;
+}
+.online-reservation .inputs2 i {
+    position: absolute;
+    color: white;
+    left: 50px;
+    top: 20px;
+}
+.online-reservation .inputs1, .inputs2, .inputs3, button {
+    margin: 50px 0;
+}
+.online-reservation .inputs1 {
+    display: flex;
+    justify-content: space-evenly
+    /* flex-wrap: wrap; */
+}
+.online-reservation .inputs1 input {
+    width: 45%;
+}
+.online-reservation .inputs2 {
+    display: flex;
+    justify-content: space-evenly;
+}
+.online-reservation .inputs2 input {
+    width: 29%;
+}
+.online-reservation .inputs3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.online-reservation .inputs3 textarea {
+    /* width: 100%; */
+    padding: 10px; 
+}
+.online-reservation .inputs4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.online-reservation input, textarea {
+    background-color: transparent;
+    border: 1px solid #a87931;
+    color: white;
+    /* background: transparent; */
+}
+.online-reservation input::placeholder, textarea::placeholder {
+    color: white;
+}
+.online-reservation button {
+    width: 93%;
+    padding: 10px 200px 10px 200px;
+    background-color: #a87931;
+}
+.online-reservation button:hover {
+    background-color: #e49115;
+    color: white;
+    transition: .5s;
+}
+.section6 .buta-bottom img {
+    width: 436px;
+    /* border: 1px solid red; */
+    position: absolute;
+    bottom: -48px;
+    left: 38%;
+    /* left: 0; */
+}
+/*reservaton end*/
+
+/*team begin*/
+main .section7 {
+    background-image: url(img/team-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 50px;
+}
+main .section7 .basliq {
+    text-align: center;
+    padding-bottom: 50px;
+}
+main .section7 .basliq span {color: #a87931;}
+main .section7 .basliq h2 {color: white;}
+main .section7 .cards {
+    /* background-color:#0F1011; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+main .section7 .cards .card {
+    border: none;
+    transition: 0.5s all ease-in-out;
+}
+main .section7 .cards .card:hover {
+    transform: translate(0, 10px);
+}
+main .section7 .cards .card .special-foto {
+    background-color: #0F1011;
+}
+main .section7 .cards .card .special-foto img {
+    width: 400px;
+}
+main .section7 .cards .card .special-text {
+    background-color: #0F1011;
+    text-align: center;
+    padding: 10px;
+}
+main .section7 .cards .card .special-text h4 {color: #a87931;}
+
+/*team end*/
+/*main end*/
+
+/*footer begin*/
+.foot .buta-bottom {
+    text-align: center;
+}
+.foot {
+    background-color: #0F1011;
+    padding-top: 50px;
+}
+.foot .logo {
+    text-align: center;
+    padding: 20px 0;
+}
+.foot .logo img {
+    width: 130px;
+    height: 48px;
+}
+.foot .navigators {
+    display: flex;
+    justify-content: space-between;
+}
+.foot .navigators ul {
+    list-style: none;
+    line-height: 50px;
+}
+.foot .navigators .booking span, .location span, .lunch-time span, .dinner-time span {
+    color: #a87931;
+}
+.foot .navigators ul li a {
+    color: white;
+    text-decoration: none;
+}
+.foot .navigators .navigation-links li a:hover, .foot .navigators .social-links li a:hover  {
+    color: #a87931;
+    transition: .5s;
+}
+.foot .navigators .booking, .location, .lunch-time, .dinner-time {
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    text-align: center;
+}
+
+/*footer end*/
+
