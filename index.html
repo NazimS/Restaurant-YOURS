@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>Restaurant 'YOURS'</title>
@@ -13,22 +15,23 @@
     <header>
         <!--navbar begin-->
         <div class="nav-menu">
-            <div class="container">
             
-                    <ul>
-                        <li><a href="#"><img src="img/logo-white.png" alt=""></a></li>
+
+                    <span class="logo-nav"> <img src="img/logo-white.png" /> </span>
+                    <div class="openMenu"><i class="fa fa-bars"></i></div>
+                    <ul class="mainMenu">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Menu</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Blog</a></li>
-                        <li><a href="">Content</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Content</a></li>
+                        <li><div class="closeMenu"><i class="fa fa-times"></i></div></li>
                     </ul>
             
-            </div>
         </div>
         <!--navbar end-->
 
-        <div class="overview">
+        <div class="overview" data-aos = "slide-up">
             <div class="infor">
                 <div class="container">
                     <h1>
@@ -46,7 +49,7 @@
     </header>
     <main>
         <!--section1 begin-->
-        <div class="section1">
+        <div class="section1" data-aos="slide-up">
             <div class="container">
                <div class="about">
                     <div class="sect1-foto">
@@ -71,19 +74,53 @@
         <!--section2 end-->
 
         <!--bloq-section begin-->
-            <div class="blog">
-                <span>BLOG</span>
-                <h2>Best Specialist</h2>
+            <div class="blog" data-aos="slide-up">
+                <div class="basliq">
+                    <span>BLOG</span>
+                    <h2>Best Specialist</h2>
+                </div>
                 <div class="container">
-                   <div class="cards">
-                    <img src="img/blog-foto.png" alt="">
-                   </div>
+                    <div class="cards">
+                       <div class="card" id="blog1">
+                                
+                            <div class="crd-top">
+                                <span>18.03.2023</span>
+                            </div>
+                            <div class="crd-bottom">
+                                <h4>FOOD, FLAVOUR</h4>
+                                <p>Flavour so good you’ll try to eat with your eyes.</p>
+                            </div>
+                                
+                        </div>
+                        <div class="card" id="blog2">
+                                
+                            <div class="crd-top">
+                                <span>18.03.2023</span>
+                            </div>
+                            <div class="crd-bottom">
+                                <h4>FOOD, FLAVOUR</h4>
+                                <p>Flavour so good you’ll try to eat with your eyes.</p>
+                            </div>
+                                
+                        </div>
+                        <div class="card" id="blog3">
+                                
+                            <div class="crd-top">
+                                <span>18.03.2023</span>
+                            </div>
+                            <div class="crd-bottom">
+                                <h4>FOOD, FLAVOUR</h4>
+                                <p>Flavour so good you’ll try to eat with your eyes.</p>
+                            </div>
+                               
+                        </div>
+                    </div>
                 </div>
             </div>
         <!--bloq-section end-->
 
         <!--section3 begin-->
-            <div class="section3">
+            <div class="section3" data-aos="slide-up">
                 <div class="container">
                     <div class="basliq">
                         <span>OUR MENU</span>
@@ -91,13 +128,14 @@
                     </div>
                     <div class="top-menu">
                         <ul>
-                            <li><a href="#">MORNING</a></li>
-                            <li><a href="#">WEEKDAY LUNCH</a></li>
-                            <li><a href="#">DINNER</a></li>
-                            <li><a href="#">WINE</a></li>
+                            <li><button class="tab" onclick="openMenu(event, 'Morning')">MORNING</button></li>
+                            <li><button class="tab" onclick="openMenu(event, 'Weekday')">WEEKDAY LUNCH</button></li>
+                            <li><button class="tab" onclick="openMenu(event, 'Dinner')">DINNER</button></li>
+                            <li><button class="tab" onclick="openMenu(event, 'Wine')">WINE</button></li>
                         </ul>
                     </div>
-                    <div class="menu-details">
+                    <!--Morning begin-->
+                    <div class="tabcontent" id="Morning">
                         <div class="left-part">
                             <div class="lasagne1">
                                 <div class="foto-part">
@@ -169,20 +207,247 @@
                             </div>
                         </div>
                     </div>
+                    <!--Morning end-->
+
+                    <!--weekday lunch begin-->
+                    <div class="tabcontent" id="Weekday">
+                        <div class="left-part">
+                            <div class="lasagne1">
+                                <div class="foto-part">
+                                    <img src="img/lunch1.jpg" alt="" id="lunch1">
+                                </div>
+                                <div class="text-part">
+                                    <h4>Lasagne ------------- 3.45$</h4>
+                                    <p>
+                                        Vegetables, cheeses, ground meats, tomato sauce,<br> seasonings and spices
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="lasagne1">
+                                <div class="foto-part">
+                                    <img src="img/lasagne5.png" alt="">
+                                </div>
+                                <div class="text-part">
+                                    <h4>Lasagne ------------- 3.45$</h4>
+                                    <p>
+                                        Vegetables, cheeses, ground meats, tomato sauce,<br> seasonings and spices
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="lasagne1">
+                                <div class="foto-part">
+                                    <img src="img/lasagne3.png" alt="">
+                                </div>
+                                <div class="text-part">
+                                    <h4>Lasagne ------------- 3.45$</h4>
+                                    <p>
+                                        Vegetables, cheeses, ground meats, tomato sauce,<br> seasonings and spices
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-part">
+                            <div class="lasagne1">
+                                <div class="foto-part">
+                                    <img src="img/lasagne4.png" alt="">
+                                </div>
+                                <div class="text-part">
+                                    <h4>Lasagne ------------- 3.45$</h4>
+                                    <p>
+                                        Vegetables, cheeses, ground meats, tomato sauce,<br> seasonings and spices
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="lasagne1">
+                                <div class="foto-part">
+                                    <img src="img/lasagne2.png" alt="">
+                                </div>
+                                <div class="text-part">
+                                    <h4>Lasagne ------------- 3.45$</h4>
+                                    <p>
+                                        Vegetables, cheeses, ground meats, tomato sauce,<br> seasonings and spices
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="lasagne1">
+                                <div class="foto-part">
+                                    <img src="img/lasagne1.png" alt="">
+                                </div>
+                                <div class="text-part">
+                                    <h4>Lasagne ------------- 3.45$</h4>
+                                    <p>
+                                        Vegetables, cheeses, ground meats, tomato sauce,<br> seasonings and spices
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--weekday lunch end-->
+
+                     <!--dinner begin-->
+                     <div class="tabcontent" id="Dinner">
+                        <div class="left-part">
+                            <div class="lasagne1">
+                                <div class="foto-part">
+                                    <img src="img/dinner1.jpg" alt="" id="dinner1">
+                                </div>
+                                <div class="text-part">
+                                    <h4>Lasagne ------------- 3.45$</h4>
+                                    <p>
+                                        Vegetables, cheeses, ground meats, tomato sauce,<br> seasonings and spices
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="lasagne1">
+                                <div class="foto-part">
+                                    <img src="img/lasagne2.png" alt="">
+                                </div>
+                                <div class="text-part">
+                                    <h4>Lasagne ------------- 3.45$</h4>
+                                    <p>
+                                        Vegetables, cheeses, ground meats, tomato sauce,<br> seasonings and spices
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="lasagne1">
+                                <div class="foto-part">
+                                    <img src="img/lasagne3.png" alt="">
+                                </div>
+                                <div class="text-part">
+                                    <h4>Lasagne ------------- 3.45$</h4>
+                                    <p>
+                                        Vegetables, cheeses, ground meats, tomato sauce,<br> seasonings and spices
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-part">
+                            <div class="lasagne1">
+                                <div class="foto-part">
+                                    <img src="img/lasagne6.png" alt="">
+                                </div>
+                                <div class="text-part">
+                                    <h4>Lasagne ------------- 3.45$</h4>
+                                    <p>
+                                        Vegetables, cheeses, ground meats, tomato sauce,<br> seasonings and spices
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="lasagne1">
+                                <div class="foto-part">
+                                    <img src="img/lasagne5.png" alt="">
+                                </div>
+                                <div class="text-part">
+                                    <h4>Lasagne ------------- 3.45$</h4>
+                                    <p>
+                                        Vegetables, cheeses, ground meats, tomato sauce,<br> seasonings and spices
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="lasagne1">
+                                <div class="foto-part">
+                                    <img src="img/lasagne1.png" alt="">
+                                </div>
+                                <div class="text-part">
+                                    <h4>Lasagne ------------- 3.45$</h4>
+                                    <p>
+                                        Vegetables, cheeses, ground meats, tomato sauce,<br> seasonings and spices
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--dinner end-->
+
+                    <!--wine begin-->
+                        <div class="tabcontent" id="Wine">
+                            <div class="left-part">
+                                <div class="lasagne1">
+                                    <div class="foto-part">
+                                        <img src="img/wine1.jpg" alt="" id="wine1">
+                                    </div>
+                                    <div class="text-part">
+                                        <h4>Lasagne ------------- 3.45$</h4>
+                                        <p>
+                                            Vegetables, cheeses, ground meats, tomato sauce,<br> seasonings and spices
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="lasagne1">
+                                    <div class="foto-part">
+                                        <img src="img/lasagne4.png" alt="">
+                                    </div>
+                                    <div class="text-part">
+                                        <h4>Lasagne ------------- 3.45$</h4>
+                                        <p>
+                                            Vegetables, cheeses, ground meats, tomato sauce,<br> seasonings and spices
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="lasagne1">
+                                    <div class="foto-part">
+                                        <img src="img/lasagne2.png" alt="">
+                                    </div>
+                                    <div class="text-part">
+                                        <h4>Lasagne ------------- 3.45$</h4>
+                                        <p>
+                                            Vegetables, cheeses, ground meats, tomato sauce,<br> seasonings and spices
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-part">
+                                <div class="lasagne1">
+                                    <div class="foto-part">
+                                        <img src="img/lasagne6.png" alt="">
+                                    </div>
+                                    <div class="text-part">
+                                        <h4>Lasagne ------------- 3.45$</h4>
+                                        <p>
+                                            Vegetables, cheeses, ground meats, tomato sauce,<br> seasonings and spices
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="lasagne1">
+                                    <div class="foto-part">
+                                        <img src="img/lasagne5.png" alt="">
+                                    </div>
+                                    <div class="text-part">
+                                        <h4>Lasagne ------------- 3.45$</h4>
+                                        <p>
+                                            Vegetables, cheeses, ground meats, tomato sauce,<br> seasonings and spices
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="lasagne1">
+                                    <div class="foto-part">
+                                        <img src="img/lasagne1.png" alt="">
+                                    </div>
+                                    <div class="text-part">
+                                        <h4>Lasagne ------------- 3.45$</h4>
+                                        <p>
+                                            Vegetables, cheeses, ground meats, tomato sauce,<br> seasonings and spices
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!--wine end-->
+
                     <span class="work-time">During winter daily from 7:00 pm to 9:00 pm</span>
                 </div>
             </div>
         <!--section3 end-->
 
         <!--spacial offer begin-->
-            <div class="special-offer">
+            <div class="special-offer" data-aos="slide-up">
                 <div class="buta">
                     <img src="img/buta-left.png" alt="">
                 </div>
                 <div class="container">
                     <div class="basliq">
-                        <span>OUR MENU</span>
-                        <h2>Delicious Menu</h2>
+                        <span>SPECIAL OFFER</span>
+                        <h2>Best Specialist</h2>
                     </div>
                     <div class="cards">
                         <div class="card">
@@ -196,7 +461,7 @@
                         </div>
                         <div class="card">
                             <div class="special-foto">
-                                <img src="img/spec-1 (1).png" alt="">
+                                <img src="img/spec-1 (2).png" alt="">
                             </div>
                             <div class="special-text">
                                 <h4>FOOD FLAVOUR</h4>
@@ -205,7 +470,7 @@
                         </div>
                         <div class="card">
                             <div class="special-foto">
-                                <img src="img/spec-1 (1).png" alt="">
+                                <img src="img/spec-1 (3).png" alt="">
                             </div>
                             <div class="special-text">
                                 <h4>FOOD FLAVOUR</h4>
@@ -218,15 +483,15 @@
         <!--special offer end-->
 
         <!--section5 begin-->
-            <div class="section5">
-                <h2>
+            <div class="section5" data-aos="slide-up">
+                <h2 data-aos="slide-up">
                     “I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.”
                 </h2>
             </div>
         <!--section5 end-->
 
         <!--reservation begin-->
-            <div class="section6">
+            <div class="section6" data-aos="slide-up">
                 <div class="container">
                     <div class="online-reservation">
                         <h2>Online Reservation</h2>
@@ -257,13 +522,13 @@
         <!--reservation end-->
 
         <!--team-section begin-->
-            <div class="section7">
+            <div class="section7" >
                 <div class="container">
-                    <div class="basliq">
+                    <div class="basliq" data-aos="slide-up">
                         <span>EXPERIENCED TEAM</span>
                         <h2>Meet Our Chef</h2>
                     </div>
-                    <div class="cards">
+                    <div class="cards" data-aos="slide-up">
                         <div class="card">
                             <div class="special-foto">
                                 <img src="img/chef-1.png" alt="">
@@ -351,5 +616,14 @@
            </div>
         </div>
     </footer>
+    <script src="script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  
+    <script>
+        AOS.init({
+            duration: 1200,
+        })
+    </script>
+
 </body>
 </html>
