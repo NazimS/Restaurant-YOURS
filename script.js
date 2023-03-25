@@ -17,12 +17,27 @@ function fixedNavbar() {
 // navbar sticky end
 
 // burger-menu begin
+
+// $(() => {
+//   $('.openMenu').click(function () {
+//     $('.mainMenu').slideToggle('slow');
+//   });
+//   $('.closeMenu').click(function () {
+//     $('.mainMenu').slideToggle('slow');
+//   });
+// });
+
 $(() => {
-  $('.openMenu').click(function () {
-    $('.mainMenu').slideToggle('slow');
+  $(".openMenu").click(function () {
+    $(".mainMenu").animate({   // right to left
+      width: "toggle"
+    });
+
   });
-  $('.closeMenu').click(function () {
-    $('.mainMenu').slideToggle('slow');
+  $(".closeMenu").click(function () {
+    $(".mainMenu").animate({  // left to right
+      width: "toggle"
+    });
   });
 });
 
