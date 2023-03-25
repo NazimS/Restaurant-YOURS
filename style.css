@@ -109,6 +109,12 @@ main .section1 .about {
     object-fit: contain;
 }
 
+.nav-menu .mainMenu .buta,
+.nav-menu .mainMenu .socials,
+.nav-menu .mainMenu .logo {
+    display: none;
+}
+
 .section1 .about .sect1-text {
     width: 500px;
     line-height: 50px;
@@ -248,9 +254,6 @@ main .section3 .basliq h2 {
     transition: .5s ease-in-out;
 }
 
-/* .section3 .top-menu ul li:nth-child(1) button {
-    color: #a87931;
-} */
 .section3 .menu-details {
     display: flex;
     justify-content: space-between;
@@ -292,8 +295,8 @@ main .section3 .basliq h2 {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    -webkit-animation: fadeEffect 5s;
-    animation: fadeEffect 5s;
+    -webkit-animation: fadeEffect 3s;
+    animation: fadeEffect 3s;
     gap: 20px;
 }
 
@@ -752,10 +755,8 @@ footer {
     }
 
     .nav-menu .mainMenu {
-        /* height: 12vh; */
-        /* margin: 0px; */
         position: fixed;
-        padding: 30px;
+        padding: 20px;
         height: 100%;
         width: 50%;
         /* height: 100%; */
@@ -763,20 +764,37 @@ footer {
         top: 0;
         right: 0;
         bottom: 0;
-        background: #b58236;
-        /* left: 0; */
-        /* background: rgb(123, 101, 47); */
-        /* flex-direction: column;
-        align-items: center;
-        justify-content: center; */
-        /* gap: 20px; */
-        transition: top 1s ease;
+        background: #2f2717;
+        overflow: scroll;
         display: none;
+        box-shadow: 0 0 8px white;
+    }
+
+    .nav-menu .mainMenu .buta,
+    .nav-menu .mainMenu .socials,
+    .nav-menu .mainMenu .logo {
+        display: block;
     }
 
     .nav-menu .mainMenu li {
         margin-bottom: 20px;
         font-size: 1.8rem;
+    }
+
+    .nav-menu .mainMenu .socials {
+        display: flex;
+    }
+
+    .nav-menu .mainMenu .buta img {
+        position: absolute;
+        right: 0;
+        transform: translateY(100px);
+    }
+
+    .nav-menu .mainMenu .logo img {
+        position: absolute;
+        bottom: 20px;
+        width: 150px;
     }
 
     .nav-menu .mainMenu .closeMenu {
